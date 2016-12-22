@@ -1,0 +1,102 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="description" content="the personal blog of abe stanway">
+  <meta name="author" content="Abe Stanway">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href='http://fonts.googleapis.com/css?family=Ultra' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="/assets/css/default.min.css">
+  
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+
+  {% if page.title == "Abe Stanway" %}
+    <title>Abe Stanway // abe.is</title>
+  {% else %}
+    <title>{{ page.title  }} // Abe Stanway</title>
+  {% endif %} 
+
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="main">
+      <div id="sidebar">
+        <a href="http://abe.is"><img id="headshot" src="http://abe.is/headshot.jpg"></a>
+        <div class="short desktop">
+            My name is <br>Abe Stanway.
+        </div>
+        <div class="short desktop">
+            I am a data engineer and I live in New York.
+        </div>
+        <div class="short mobile">
+            <a href="/">Abe Stanway</a>
+        </div>
+        <div class="border"></div>
+        <div class="headercontainer">
+            <div class="short headerlink"> 
+                <a class="social" href="/a/human">About</a>
+            </div>
+            <div class="short headerlink"> 
+                <a class="social" href="/a/speaker">Talks</a>
+            </div>
+            <div class="border"></div>
+            <div class="short headerlink"> 
+                <a class="social" href="http://twitter.com/abestanway">Twitter</a>
+            </div>
+            <div class="short headerlink">
+                <a class="social" href="http://github.com/astanway">Github</a>
+            </div>
+            <div class="short headerlink"> 
+                <a class="social" href="http://speakerdeck.com/astanway">Speakerdeck</a>
+            </div>
+            <div class="short headerlink">
+                <a class="social" href="https://www.linkedin.com/in/abestanway">LinkedIn</a>
+            </div>
+            
+        </div>
+      </div>
+      <div id="blogposts">
+    		{{ content }}
+		  </div>
+    </div>
+  </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='/static/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type='application/javascript' src='/assets/js/fastclick.js'></script>
+  <script>
+      $(function() {
+          FastClick.attach(document.body);
+      });
+  </script>
+
+
+
+  <script type="text/javascript"> 
+ 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25263877-1']);
+    _gaq.push(['_trackPageview']);
+ 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+ 
+  </script>
+
+</body>
+</html>

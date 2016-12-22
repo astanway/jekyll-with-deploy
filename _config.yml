@@ -1,0 +1,9 @@
+name: Abe Stanway
+include: [.well-known]
+pygments: true
+permalink: /:title
+baseurl: /
+navigation:
+- text: Home
+  url: /
+

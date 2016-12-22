@@ -1,0 +1,25 @@
+---
+layout: page
+section: author-index
+---
+
+<div id="archive">
+  <h2 id="tag-header"><img class="inline" src="/img/authors/{{ page.author }}.jpg"/> {{ page.title }}</h2>
+  <ul>
+    {% for post in site.posts %}
+        {% if post.author_full_name == page.author_full_name %}
+          <li>
+              <h3>
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+              </h3>
+              <p class="meta">
+                  Posted by <a href="/author/{{ post.author }}">{{ post.author_full_name }}</a> on {{ post.date | date: "%B %d, %Y" }}
+              </p>
+              <div class="excerpt">
+            
+              </div>
+          </li>
+        {% endif %}
+    {% endfor %}
+  </ul>
+</div>
